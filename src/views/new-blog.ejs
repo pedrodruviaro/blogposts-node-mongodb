@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./parts/head.ejs') %>
+  <body>
+    <%- include('./parts/header.ejs') %>
+    <main class="container">
+      <form class="new-blog-form" action="/new-blog" method="POST">
+        <input
+          type="text"
+          placeholder="Title"
+          name="title"
+          required
+          class="animate-up"
+        />
+        <input
+          type="text"
+          placeholder="Snippet"
+          name="snippet"
+          required
+          class="animate-up"
+        />
+        <textarea
+          name="body"
+          placeholder="Content"
+          required
+          class="animate-up"
+        ></textarea>
+        <button type="submit" class="btn animate-up">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

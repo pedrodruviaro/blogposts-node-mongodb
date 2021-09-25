@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./parts/head.ejs') %>
+  <body>
+    <%- include('./parts/header.ejs') %>
+    <main class="container">
+      <section class="blogs-list">
+        <% blogs.forEach(blog => { %>
+
+        <article class="blog-article">
+          <h5><%= blog.title %></h5>
+          <p><%= blog.snippet %></p>
+          <a
+            href="/blog/<%= blog._id %> "
+            class="btn read"
+            data-id="<%= blog._id %> "
+          >
+            Read Full Article
+          </a>
+        </article>
+
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>
